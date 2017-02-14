@@ -1,0 +1,20 @@
+<% var first = include('./first.json');%>
+<% var headercss = JSON.parse(first).headercss%>
+<% var headerjs = JSON.parse(first).headerjs%>
+<% var footerjs = JSON.parse(first).footerjs%>
+
+
+<body>
+  <% headercss.forEach(function(item){%>
+    <link href='<%= item%>'>
+  <%})%>
+  <% headerjs.forEach(function(item){%>
+    <script src='<%= item%>'></script>
+  <%})%>
+
+    <div>hello world</div>
+
+  <% footerjs.forEach(function(item){%>
+    <script src='<%= item%>'></script>
+  <%})%>
+</body>

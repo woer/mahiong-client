@@ -1,0 +1,4 @@
+{
+  "/first": "./controller/first.ejs",
+  "/second": "./controller/second.ejs"
+}

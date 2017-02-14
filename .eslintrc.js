@@ -1,30 +1,28 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
-  parserOptions: {
-    sourceType: 'module'
-  },
-  extends: 'airbnb-base',
-  // required to lint *.vue files
+  // parser: 'babel-eslint',
+  // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
+  extends: 'standard',
+  
+  // 支持HTML格式：.html, .xhtml, .htm, .xml, .vue, .hbs, .mustache, .handelbars, .php, .twig
+  // https://github.com/BenoitZugmeyer/eslint-plugin-html
   plugins: [
     'html'
   ],
-  // check if imports actually resolve
-  'settings': {
-    'import/resolver': {
-      'webpack': {
-        'config': 'build/webpack.base.conf.js'
-      }
-    }
+  "globals": {
+    "__PROD__": true,
+    "__DEV__": true,
+    "__TEST__": true
   },
   // add your custom rules here
   'rules': {
-    // don't require .vue extension when importing
-    'import/extensions': ['error', 'always', {
-      'js': 'never',
-      'vue': 'never'
+    // allow paren-less arrow functions
+    'arrow-parens': 0,
+    // 'semi': [2, 'always'],
+    'indent': [2, 2, {
+      'SwitchCase': 1
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
-}
+};

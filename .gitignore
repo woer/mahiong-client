@@ -1,7 +1,9 @@
+/.cache
+/.idea
+/node_modules
+/build
+/assets
 .DS_Store
-node_modules/
-dist/
-npm-debug.log
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
+*.log
+test/e2e/reports/
+test/unit/coverage/

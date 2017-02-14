@@ -1,0 +1,5 @@
+{
+  "headercss": ["assets/pages/test/style/index.css"],
+  "headerjs": [],
+  "footerjs": ["assets/pages/test/index.js"]
+}
